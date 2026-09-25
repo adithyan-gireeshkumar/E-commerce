@@ -23,8 +23,12 @@ const PatternPlaceholder = () => {
           </div>
 
           <div className="flex items-center justify-center">
-            <Button className="mt-4 rounded-[6px] border-0 bg-white px-[50px] py-3 text-[rgb(187,87,6)] cursor-pointer hover:bg-[rgb(40, 21, 5)] gap-2  ">Shop Now</Button>
-          </div>
+<Button
+  render={<a href="/products" />}
+  className="mt-4 rounded-[6px] border-0 bg-white px-[50px] py-3 text-[rgb(187,87,6)] cursor-pointer"
+>
+  Shop Now
+</Button>          </div>
         </div>
       </div>
     </div>
