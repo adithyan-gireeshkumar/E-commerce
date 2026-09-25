@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-
+import { Link } from "react-router-dom";
 import { Price, PriceValue } from "@/components/shadcnblocks/price";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
@@ -136,9 +136,9 @@ const ProductCard = ({
 
   return (
     <a
-  href={link}
-  className="block h-full w-full transition-opacity hover:opacity-80"
->
+      href={link}
+      className="block h-full w-full transition-opacity hover:opacity-80"
+    >
       <Card className="h-full overflow-hidden p-0">
         <CardHeader className="relative block p-0">
           <AspectRatio ratio={1.268115942} className="overflow-hidden">

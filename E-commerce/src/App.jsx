@@ -1,8 +1,15 @@
 import Home from "@/pages/Home";
 import Products from "@/pages/Products";
+import ProductDetails from "@/pages/ProductDetails";
 
 function App() {
-  return window.location.pathname === "/products" ? <Products /> : <Home />;
+  const path = window.location.pathname;
+
+  if (path.startsWith("/products/")) {
+    return <ProductDetails />;
+  }
+
+  return path === "/products" ? <Products /> : <Home />;
 }
 
 export default App;
