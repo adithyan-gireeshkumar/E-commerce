@@ -18,7 +18,7 @@ const PRODUCTS_LIST = [
       src: "https://images.unsplash.com/photo-1581375321224-79da6fd32f8e",
       alt: "Fresh coconut",
     },
-    link: "#",
+    link: "/products/fresh-coconut",
     description: "Fresh coconut sourced from Kerala.",
     price: {
       regular: 80,
@@ -35,7 +35,7 @@ const PRODUCTS_LIST = [
       src: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e",
       alt: "Kerala banana",
     },
-    link: "#",
+    link: "/products/kerala-banana",
     description: "Fresh and naturally ripened Kerala bananas.",
     price: {
       regular: 60,
@@ -53,7 +53,7 @@ const PRODUCTS_LIST = [
       src: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108",
       alt: "Coconut oil",
     },
-    link: "#",
+    link: "/products/coconut-oil",
     description: "Pure coconut oil for cooking and daily use.",
     price: {
       regular: 220,
@@ -67,7 +67,7 @@ const PRODUCTS_LIST = [
       src: "https://images.unsplash.com/photo-1586201375761-83865001e31c",
       alt: "Rice",
     },
-    link: "#",
+    link: "/products/traditional-rice",
     description: "Traditional Kerala rice varieties.",
     price: {
       regular: 120,
@@ -81,7 +81,7 @@ const PRODUCTS_LIST = [
       src: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d",
       alt: "Indian spices",
     },
-    link: "#",
+    link: "/products/spice-pack",
     description: "A selection of aromatic Kerala spices.",
     price: {
       regular: 180,
@@ -99,7 +99,7 @@ const PRODUCTS_LIST = [
       src: "https://images.unsplash.com/photo-1623238913973-21e45cced554",
       alt: "Banana chips",
     },
-    link: "#",
+    link: "/products/banana-chips",
     description: "Crispy traditional Kerala banana chips.",
     price: {
       regular: 100,
@@ -135,10 +135,10 @@ const ProductCard = ({
   const { regular, sale, currency } = price;
 
   return (
-    <a
-      href={link}
-      className="block h-full w-full transition-opacity hover:opacity-80"
-    >
+    <Link
+  to={link}
+  className="block h-full w-full transition-opacity hover:opacity-80"
+>
       <Card className="h-full overflow-hidden p-0">
         <CardHeader className="relative block p-0">
           <AspectRatio ratio={1.268115942} className="overflow-hidden">
@@ -176,7 +176,7 @@ const ProductCard = ({
           </div>
         </CardContent>
       </Card>
-    </a>
+    </Link >
   );
 };
 

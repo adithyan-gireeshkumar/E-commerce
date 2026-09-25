@@ -1,15 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from "@/pages/Home";
 import Products from "@/pages/Products";
 import ProductDetails from "@/pages/ProductDetails";
 
 function App() {
-  const path = window.location.pathname;
-
-  if (path.startsWith("/products/")) {
-    return <ProductDetails />;
-  }
-
-  return path === "/products" ? <Products /> : <Home />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
