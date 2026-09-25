@@ -6,9 +6,15 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { cn } from "cn";
+import logoImage from "../assets/ChatGPT Image Sep 25, 2026, 08_42_36 PM.png";
 
 const defaultProps = {
- 
+  logo: {
+    src: logoImage,
+    alt: "Peedika",
+    title: "Peedika",
+    url: "#",
+  },
   description: "Finely crafted blocks built with Shadcn UI.",
  
   socialLinks: [
